@@ -250,20 +250,6 @@ flutter build ios --release
    ```
    **Solution**: Verify Firebase Authentication is enabled in Firebase Console
 
-## 🔄 API Endpoints
-
-### YTS.MX Movie API
-- **Base URL**: `https://yts.mx/api/v2`
-- **List Movies**: `/list_movies.json`
-- **Movie Details**: `/movie_details.json?movie_id={ID}&with_cast=true&with_images=true`
-- **Movie Suggestions**: `/movie_suggestions.json?movie_id={ID}`
-- **Search Movies**: `/list_movies.json?query_term={SEARCH_TERM}`
-
-### Firebase Services
-- **Authentication**: Email/Password, Google Sign-In
-- **Firestore**: User profiles and app data
-- **Storage**: User profile images (optional)
-
 ## 📋 TODO / Future Enhancements
 
 - [ ] Add movie watchlist functionality
