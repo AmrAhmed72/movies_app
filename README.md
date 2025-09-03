@@ -106,34 +106,6 @@ lib/
    flutter run
    ```
 
-## 🔧 Configuration
-
-### Firebase Services Setup
-
-1. **Authentication**
-   - Go to Authentication > Sign-in method
-   - Enable Email/Password
-   - Enable Google (optional)
-
-2. **Firestore Database**
-   - Go to Firestore Database
-   - Create database in production mode
-   - Set up security rules as needed
-
-3. **Storage (Optional)**
-   - Enable Cloud Storage for user profile images
-
-### API Configuration
-The app uses YTS.MX API for movie data:
-- **Base URL**: `https://yts.mx/api/v2`
-- **No API key required**
-- **Rate limits apply**
-
-Available endpoints:
-- List Movies: `/list_movies.json`
-- Movie Details: `/movie_details.json?movie_id=ID`
-- Movie Suggestions: `/movie_suggestions.json?movie_id=ID`
-
 ## 📱 App Screens
 
 ### Authentication
@@ -150,20 +122,6 @@ Available endpoints:
 - **Movie Details** - Full movie information
 - **Favorites** - Saved movies collection
 
-## 🛠️ Development
-
-### Code Generation
-Run code generation for models and dependency injection:
-```bash
-flutter packages pub run build_runner build
-```
-
-### Adding New Features
-1. Create BLoC/Cubit for state management
-2. Define states in `bloc/states/`
-3. Create corresponding UI screens
-4. Register dependencies in `core/di/injection.dart`
-
 ### Localization
 To add new languages:
 1. Add translation files in `assets/translations/`
@@ -177,10 +135,9 @@ To add new languages:
 | flutter_bloc | ^9.0.0 | State management |
 | firebase_core | ^3.11.0 | Firebase integration |
 | firebase_auth | ^5.4.2 | User authentication |
-| cloud_firestore | ^5.6.3 | NoSQL database |
 | cached_network_image | ^3.4.1 | Image caching |
 | easy_localization | ^3.0.7+1 | Multi-language support |
-| dio | ^5.8.0+1 | HTTP client |
+| dio | ^5.8.0+1 
 | shared_preferences | ^2.5.2 | Local storage |
 
 ## 🔒 Security Features
@@ -191,64 +148,6 @@ To add new languages:
 - **Local Data Encryption** with SharedPreferences
 - **Authentication State Management**
 
-## 🧪 Testing
-
-Run tests with:
-```bash
-flutter test
-```
-
-For widget tests:
-```bash
-flutter test test/widget_test.dart
-```
-
-## 🚀 Build & Release
-
-### Debug Build
-```bash
-flutter run
-```
-
-### Release Build
-```bash
-# Android
-flutter build apk --release
-
-# Android Bundle
-flutter build appbundle --release
-
-# iOS
-flutter build ios --release
-```
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-1. **Firebase Configuration Error**
-   ```
-   [ERROR] No Firebase App has been created
-   ```
-   **Solution**: Ensure `google-services.json` is in `android/app/` and Firebase is initialized in `main.dart`
-
-2. **YTS API Connection Issues**
-   ```
-   [ERROR] Failed to load movies
-   ```
-   **Solution**: Check internet connection and YTS.MX API availability
-
-3. **Build Configuration Issues**
-   ```
-   [ERROR] Missing dependencies
-   ```
-   **Solution**: Run `flutter pub get` and ensure all dependencies are installed
-
-4. **Authentication Issues**
-   ```
-   [ERROR] Firebase Auth failed
-   ```
-   **Solution**: Verify Firebase Authentication is enabled in Firebase Console
 
 ## 📋 TODO / Future Enhancements
 
