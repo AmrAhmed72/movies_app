@@ -72,7 +72,7 @@ class _ProfileTabState extends State<ProfileTab> {
                                 style: textTheme.titleSmall,
                               ),
                               Text(
-                                "watch_list".tr(),
+                                "Wich List",
                                 style: textTheme.bodyLarge,
                               )
                             ],
@@ -84,7 +84,7 @@ class _ProfileTabState extends State<ProfileTab> {
                                 style: textTheme.titleSmall,
                               ),
                               Text(
-                                "history".tr(),
+                                "History",
                                 style: textTheme.bodyLarge,
                               )
                             ],
@@ -148,7 +148,7 @@ class _ProfileTabState extends State<ProfileTab> {
                                 color: AppColors.button,
                                 size: 40,
                               ),
-                              Text("watch_list".tr())
+                              Text("Watch List".tr())
                             ],
                           ),
                         ),

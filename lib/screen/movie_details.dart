@@ -171,14 +171,13 @@ class MovieDetails extends StatelessWidget {
                                       id: movie.id!,
                                     ),
                                   ),
-                                if (movieChossen != null)
-                                  if (movieChossen!.summary?.isNotEmpty ??
-                                      false)
-                                    Text("summary".tr(),
-                                        style: textTheme.titleMedium),
-                                if (movieChossen != null)
-                                  SummaryMovie(
-                                      title: movieChossen!.summary ?? ''),
+                                // Always show summary section with debug info
+                                Text("summary".tr(), style: textTheme.titleMedium),
+                                SummaryMovie(
+                                  title: movie.descriptionFull ??
+                                         movie.descriptionIntro ??
+                                         'No description available for this movie.',
+                                ),
                                 if (movie.cast != null &&
                                     movie.cast!.isNotEmpty)
                                   Text("cast".tr(),

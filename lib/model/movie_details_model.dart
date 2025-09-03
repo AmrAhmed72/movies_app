@@ -124,7 +124,7 @@ class Movie {
     year = json['year'];
     rating = json['rating'];
     runtime = json['runtime'];
-    genres = json['genres'].cast<String>();
+    genres = json['genres']?.cast<String>();
     likeCount = json['like_count'];
     descriptionIntro = json['description_intro'];
     descriptionFull = json['description_full'];
